@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Projecto_BD_Algoritmos
 {
-    class CRUD
+    public class CRUD
     {
         public SqlConnection Conexion;
         public SqlCommand Comando;
