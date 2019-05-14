@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Projecto_BD_Algoritmos
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
         public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
 
-        public Form1()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
@@ -23,7 +23,14 @@ namespace Projecto_BD_Algoritmos
         {
             BaseDatos = new CRUD();
             //MessageBox.Show("baer");
-            MessageBox.Show("baerecito");
+            //MessageBox.Show("baerecito");
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmLogin Form1 = new FrmLogin();
+            //Form1.MdiParent = this;
+            Form1.Show();
         }
     }
 }
