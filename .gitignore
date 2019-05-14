@@ -329,3 +329,10 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 *.cache
+*.cache
+Projecto_BD_Algoritmos/Projecto_BD_Algoritmos/obj/Debug/Projecto_BD_Algoritmos.csproj.CoreCompileInputs.cache
+Projecto_BD_Algoritmos/Projecto_BD_Algoritmos/bin/Debug/Projecto_BD_Algoritmos.exe
+Projecto_BD_Algoritmos/Projecto_BD_Algoritmos/obj/Debug/Projecto_BD_Algoritmos.pdb
+Projecto_BD_Algoritmos/.vs/Projecto_BD_Algoritmos/v15/Server/sqlite3/storage.ide-shm
+Projecto_BD_Algoritmos/.vs/Projecto_BD_Algoritmos/v15/.suo
+Projecto_BD_Algoritmos/Projecto_BD_Algoritmos/bin/Debug/Projecto_BD_Algoritmos.pdb
