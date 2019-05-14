@@ -12,6 +12,8 @@ namespace Projecto_BD_Algoritmos
 {
     public partial class Form1 : Form
     {
+        //public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace Projecto_BD_Algoritmos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("baer");
+            BaseDatos = new CRUD();
+            //MessageBox.Show("baer");
         }
     }
 }
