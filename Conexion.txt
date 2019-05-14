@@ -1,0 +1,75 @@
+//Esto va en una clase xd
+public class CRUD
+    {
+        public SqlConnection Conexion;
+        public SqlCommand Comando;
+        public SqlDataReader Lector;
+        public string cadConexion;
+
+        public CRUD()
+        {
+            this.Conexion = new SqlConnection();
+            this.Comando = new SqlCommand();
+            this.cadConexion = string.Empty;
+        }
+
+        public CRUD(string CadenaConexion)
+        {
+            this.Conexion = new SqlConnection();
+            this.Conexion.ConnectionString = CadenaConexion;
+
+            this.Comando = new SqlCommand();
+            this.cadConexion = CadenaConexion;
+        }   
+    }
+
+//En el formulario principal, aqui se llaman los metodos de la clase CRUD
+ public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
+
+        public FrmPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLogin Forma1 = new FrmLogin();
+            Forma1.MdiParent = this;
+            Forma1.Show();
+
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            BaseDatos = new CRUD();
+        }
+
+//En un form llamado login, para permitir insertar datos directamente a la base de datos desde un usuario
+//de seguridad  creado desde la base de datos
+ public FrmLogin()
+        {
+            InitializeComponent();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            //string CadenaConexion = "Data Source = DESKTOP-LGBA956\\SQLEXPRESS01; Initial Catalog = Topicos; Integrated Security = True";
+            string CadenaConexion = "Data Source = DESKTOP-LGBA956\\SQLEXPRESS01; Initial Catalog = Topicos; user id = " +
+                txtUsername.Text + "; password =" + txtPassword.Text;
+
+            try
+            {
+                //Conexion.ConnectionString = CadenaConexion;
+                //Conexion.Open();
+                FrmPrincipal.BaseDatos.cadConexion = CadenaConexion;
+                FrmPrincipal.BaseDatos.Conexion.ConnectionString = CadenaConexion;
+                FrmPrincipal.BaseDatos.Conexion.Open();
+                MessageBox.Show("Conexion Inciada");
+                FrmPrincipal.BaseDatos.Conexion.Close();
+                this.Close();
+            }
+            catch (SqlException Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
