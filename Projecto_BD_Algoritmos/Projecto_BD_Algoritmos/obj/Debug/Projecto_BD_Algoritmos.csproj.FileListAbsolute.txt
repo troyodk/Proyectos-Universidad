@@ -8,3 +8,13 @@ C:\Users\Fus-3\OneDrive\Documentos\GitHub\Proyectos-Universidad\Projecto_BD_Algo
 C:\Users\Fus-3\OneDrive\Documentos\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.csproj.CoreCompileInputs.cache
 C:\Users\Fus-3\OneDrive\Documentos\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.exe
 C:\Users\Fus-3\OneDrive\Documentos\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.pdb
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\bin\Debug\Projecto_BD_Algoritmos.exe.config
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\bin\Debug\Projecto_BD_Algoritmos.exe
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\bin\Debug\Projecto_BD_Algoritmos.pdb
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.csprojAssemblyReference.cache
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.Form1.resources
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.Properties.Resources.resources
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.csproj.GenerateResource.cache
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.csproj.CoreCompileInputs.cache
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.exe
+C:\Users\troyodk\Documents\GitHub\Proyectos-Universidad\Projecto_BD_Algoritmos\Projecto_BD_Algoritmos\obj\Debug\Projecto_BD_Algoritmos.pdb

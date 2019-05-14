@@ -23,6 +23,7 @@ namespace Projecto_BD_Algoritmos
         {
             BaseDatos = new CRUD();
             //MessageBox.Show("baer");
+            MessageBox.Show("baerecito");
         }
     }
 }
