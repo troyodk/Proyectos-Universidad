@@ -18,13 +18,14 @@ void board(){
  y = 30;
  x1 = x;
  y1 = y;
- 
+ int lol=0;
  for(i = 1; i <= size; i++){
     for (j = 0; j < i; j++){
-        Poste[cont].setPosition(x+(20*j),y);
+        Poste[cont].setPosition(x+(20*j)-lol,y);
         Mundo.add(Poste[cont]);
         cont ++;
     }
+    lol-=10;
     x = width/2;;
     x = x-(20*i);
     y += 20;
