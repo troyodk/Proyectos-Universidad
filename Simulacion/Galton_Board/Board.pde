@@ -30,17 +30,17 @@ void board(){
     y += 20;
  }
  
- for(i = 1; i <= size; i++){  
-    x1 = width/2;
-    for (j = 0; j < i; j++){
-        Poste2[cont2].setPosition(x1,y1);
-        Mundo.add(Poste2[cont2]);
-        x1 += 20;
-        cont2 ++;
-    }
-    x1 -= 20*i;
-    y1 += 20;
- }
+ //for(i = 1; i <= size; i++){  
+ //   x1 = width/2;
+ //   for (j = 0; j < i; j++){
+ //       Poste2[cont2].setPosition(x1,y1);
+ //       Mundo.add(Poste2[cont2]);
+ //       x1 += 20;
+ //       cont2 ++;
+ //   }
+ //   x1 -= 20*i;
+ //   y1 += 20;
+ //}
  
  //Poste[0].setPosition(x,y);
  //Mundo.add(Poste[0]);
