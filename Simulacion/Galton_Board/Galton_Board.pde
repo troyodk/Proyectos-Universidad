@@ -30,7 +30,7 @@ void setup(){
  board();
  
  Mundo.setEdges();
- Mundo.setEdgesFriction(0);
+ Mundo.setEdgesFriction(1);
  Mundo.setEdgesRestitution(1);
 }
 
@@ -42,4 +42,8 @@ void draw(){
 
 void mouseClicked(){
  BallDrop(); 
+}
+
+void keyPressed(){
+ ClearDaBalls();
 }
