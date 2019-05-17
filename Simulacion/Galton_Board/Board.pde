@@ -1,6 +1,7 @@
 static int size = 12, Pels = 150, cont = 0;
 FCircle[] Poste = new FCircle[78];
 FCircle[] Balls = new FCircle[Pels];
+FLine[] Limite_Bars= new FLine[30];
 
 void board(){
  int i, j ,x, y; 
@@ -43,6 +44,30 @@ void board(){
  //Mundo.add(Poste[1]);
  //Poste[2].setPosition(x+15,y+15);
  //Mundo.add(Poste[1]);
+ 
+ for( i=0;i<30;i++)
+      {
+        /*
+        for(j=0;j<30;j++)
+        {
+           FCircle lax=new FCircle(10);
+           lax.setStatic(true);
+           lax.setPosition(i*30,500+(j*10));
+           Mundo.add(lax);
+        }
+        */
+        FBox pendejada= new FBox(10,500);
+        pendejada.setPosition((i*30),(600));
+        pendejada.setStatic(true);
+        Mundo.add(pendejada);
+        /*
+      Limite_Bars[i]= new FLine(0,0,0,500);
+      Limite_Bars[i].setPosition((i*30),(500));
+      Limite_Bars[i].setStroke(random(255),random(255),random(255));
+      Limite_Bars[i].setStatic(true);
+      Mundo.add(Limite_Bars[i]);
+      */
+      }
 }
 
 void BallDrop(){
