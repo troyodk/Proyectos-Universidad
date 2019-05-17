@@ -1,20 +1,20 @@
-static int size = 10, Pels = 150, cont = 0;
-FCircle[] Poste = new FCircle[55];
+static int size = 12, Pels = 150, cont = 0;
+FCircle[] Poste = new FCircle[78];
 FCircle[] Balls = new FCircle[Pels];
 
 void board(){
  int i, j ,x, y; 
- for(i=0; i<55; i++){
+ for(i=0; i<78; i++){
   Poste[i] = new FCircle(10);
   Poste[i].setStatic(true);
  }
 
  x = width/2;
- y = 30;
+ y = 80;
  int lol=0;
  for(i = 1; i <= size; i++){
     for (j = 0; j < i; j++){
-        Poste[cont].setPosition(x+(20*j)-lol,y);
+        Poste[cont].setPosition(x+(20*j)-lol,y);  
         Mundo.add(Poste[cont]);
         cont ++;
     }
