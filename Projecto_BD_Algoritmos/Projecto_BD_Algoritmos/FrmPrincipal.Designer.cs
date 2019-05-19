@@ -40,6 +40,7 @@
             this.btnVisitanos.TabIndex = 0;
             this.btnVisitanos.Text = "Visitanos!!!";
             this.btnVisitanos.UseVisualStyleBackColor = true;
+            this.btnVisitanos.Click += new System.EventHandler(this.btnVisitanos_Click);
             // 
             // btnLogin
             // 
@@ -59,7 +60,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnVisitanos);
             this.Name = "FrmPrincipal";
-            this.Text = "Form1";
+            this.Text = "Bienvenidos";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

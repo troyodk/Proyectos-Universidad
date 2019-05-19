@@ -32,5 +32,13 @@ namespace Projecto_BD_Algoritmos
             //Form1.MdiParent = this;
             Form1.Show();
         }
+
+        private void btnVisitanos_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal FormP = new FrmPrincipal();
+            FrmTienda Form2 = new FrmTienda();
+            Form2.Show();
+            this.Hide();
+        }
     }
 }

@@ -5,7 +5,7 @@ Public Class conection
     'd)FUNCIONES
     Protected Function conectar()
         Try
-            cnn.ConnectionString = ("server=LAPTOP-OVERLORD;database=Examen_library;integrated security=true")
+            'cnn.ConnectionString = ("server=LAPTOP-OVERLORD;database=Examen_library;integrated security=true")
             cnn.Open()
             Return True
         Catch ex As Exception
