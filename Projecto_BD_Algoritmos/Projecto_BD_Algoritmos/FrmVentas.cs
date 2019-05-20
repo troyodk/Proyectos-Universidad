@@ -13,6 +13,8 @@ namespace Projecto_BD_Algoritmos
 {
     public partial class FrmVentas : Form
     {
+
+        int Fila = 0;
         public FrmVentas()
         {
             InitializeComponent();
@@ -58,6 +60,107 @@ namespace Projecto_BD_Algoritmos
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             CargarGrid();
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow Renglon = dataGridView1.CurrentRow;
+            int indice = dataGridView1.RowCount - 1;
+            String id_Ventas, id_Factura, id_Producto, cantidad;
+
+            Renglon = dataGridView1.Rows[indice - 1];
+
+            id_Ventas = Renglon.Cells["id_Ventas"].Value.ToString();
+            id_Factura = Renglon.Cells["id_Factura"].Value.ToString();
+            id_Producto = Renglon.Cells["id_Producto"].Value.ToString();
+            cantidad = Renglon.Cells["cantidad"].Value.ToString();
+
+            try
+            {
+                if (FrmPrincipal.BaseDatos.Conexion.State == ConnectionState.Closed)
+                    FrmPrincipal.BaseDatos.Conexion.Open();
+                int res = FrmPrincipal.BaseDatos.insertar_venta(id_Ventas, id_Factura, id_Producto, cantidad);
+                if (res == 1)
+                {
+                    MessageBox.Show("Datos insertados");
+                    btnInsertar.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Datos no Insertados");
+                }
+                CargarGrid();
+            }
+            catch (SqlException EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
+            btnInsertar.Enabled = false;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow Renglon = dataGridView1.CurrentRow;
+            int indice = dataGridView1.RowCount - 1;
+            String id_Ventas, id_Factura, id_Producto, cantidad;
+
+            Renglon = dataGridView1.Rows[indice - 1];
+
+            id_Ventas = Renglon.Cells["id_Ventas"].Value.ToString();
+            id_Factura = Renglon.Cells["id_Factura"].Value.ToString();
+            id_Producto = Renglon.Cells["id_Producto"].Value.ToString();
+            cantidad = Renglon.Cells["cantidad"].Value.ToString();
+
+            try
+            {
+                if (FrmPrincipal.BaseDatos.Conexion.State == ConnectionState.Closed)
+                    FrmPrincipal.BaseDatos.Conexion.Open();
+                int res = FrmPrincipal.BaseDatos.editar_venta(id_Ventas, id_Factura, id_Producto, cantidad);
+                if (res == 1)
+                {
+                    MessageBox.Show("El registro con id = " + id_Ventas + " fue actualizado");
+                    btnActualizar.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar el registro");
+                }
+                CargarGrid();
+            }
+            catch (SqlException EX)
+            {
+                MessageBox.Show(EX.Message);
+            }
+            btnActualizar.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string SQL, id;
+            SqlCommand Comando;
+            try
+            {
+                id = dataGridView1.Rows[Fila].Cells[0].Value.ToString();
+                SQL = "DELETE FROM Facturas WHERE id_Ventas=" + id + ";";
+
+                Comando = new SqlCommand(SQL, FrmPrincipal.BaseDatos.Conexion);
+                Comando.CommandType = CommandType.Text;
+
+                if (Comando.Connection.State == ConnectionState.Closed)
+                    Comando.Connection.Open();
+
+                int f = Comando.ExecuteNonQuery();
+                if (f == 0)
+                    MessageBox.Show("No se pudo borrar el registro");
+                else
+                    MessageBox.Show("El registro con id = " + id + " fue borrado");
+
+                CargarGrid();
+            }
+            catch (SqlException Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
         }
     }
 }

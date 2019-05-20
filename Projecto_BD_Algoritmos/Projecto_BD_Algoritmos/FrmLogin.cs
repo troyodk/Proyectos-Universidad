@@ -48,8 +48,7 @@ namespace Projecto_BD_Algoritmos
                 FrmPrincipal.BaseDatos.Conexion.Close();
                 this.Close();
                 Form3.Hide();
-                FormV.Show();
-                
+                //FormPr.Show();
             }
             catch (SqlException Ex)
             {
