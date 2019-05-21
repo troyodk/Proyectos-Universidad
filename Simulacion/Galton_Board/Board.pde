@@ -37,15 +37,17 @@ void board(){
  }
    stroke(255,0,0);
    FLine troy=new FLine(345,50,240,300);
+   troy.setStroke(255,255,255);
    FLine troy2=new FLine(460,300,355,50);
+   troy2.setStroke(255,255,255);
    
    
     FBox pendejadas= new FBox(10,80);
-        pendejadas.setPosition(367,(55));
+        pendejadas.setPosition(367,(40));
         pendejadas.setStatic(true);
         Mundo.add(pendejadas);
         FBox pendejadas2= new FBox(10,80);
-        pendejadas2.setPosition(332,(55));
+        pendejadas2.setPosition(332,(40));
         pendejadas2.setStatic(true);
         Mundo.add(pendejadas2);
   // FLine limit_sup=new FLine(345,70,345,100);
@@ -107,7 +109,7 @@ void BallDrop(){
    Balls[i] = new FCircle(7);
  // System.out.print( Balls[i].getDensity());
   Balls[i].setDensity(.5);
-  Balls[i].setPosition((width/2)+random(10),(0));
+  Balls[i].setPosition((width/2)+random(5),(0));
   Balls[i].setFill(random(255),random(255),random(255));
   Balls[i].setDensity(100);
   Mundo.add(Balls[i]);
