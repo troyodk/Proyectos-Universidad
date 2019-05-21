@@ -85,7 +85,7 @@ namespace Projecto_BD_Algoritmos
                 this.Comando = new SqlCommand("SP_eliminar_proveedores", this.Conexion);
                 this.Comando.CommandType = CommandType.StoredProcedure;
 
-                //this.Comando.Parameters.AddWithValue("id_Proveedor", id_proveedor);
+                this.Comando.Parameters.AddWithValue("id_Proveedor", id_proveedor);
                 filas = this.Comando.ExecuteNonQuery();
             }
             catch (SqlException Ex)

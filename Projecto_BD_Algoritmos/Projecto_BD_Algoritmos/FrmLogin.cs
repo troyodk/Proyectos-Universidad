@@ -34,6 +34,7 @@ namespace Projecto_BD_Algoritmos
             FrmFacturas FormF = new FrmFacturas();
             FrmVentas FormV = new FrmVentas();
             //Aqui va el usuario creado en la base de datos y hay que cambiar la base de datos
+            //Esta es la compu de Uriel xd
             string CadenaConexion = "Data Source = DESKTOP-LGBA956\\SQLEXPRESS01; Initial Catalog = TiendaExamen; user id = " +
                 txtUsername.Text + "; password =" + txtPassword.Text;
 
@@ -48,7 +49,7 @@ namespace Projecto_BD_Algoritmos
                 FrmPrincipal.BaseDatos.Conexion.Close();
                 this.Close();
                 Form3.Hide();
-                //FormPr.Show();
+                FormV.Show();
             }
             catch (SqlException Ex)
             {

@@ -141,7 +141,7 @@ namespace Projecto_BD_Algoritmos
             try
             {
                 id = dataGridView1.Rows[Fila].Cells[0].Value.ToString();
-                SQL = "DELETE FROM Facturas WHERE id_Ventas=" + id + ";";
+                SQL = "DELETE FROM Ventas WHERE id_Ventas=" + id + ";";
 
                 Comando = new SqlCommand(SQL, FrmPrincipal.BaseDatos.Conexion);
                 Comando.CommandType = CommandType.Text;
