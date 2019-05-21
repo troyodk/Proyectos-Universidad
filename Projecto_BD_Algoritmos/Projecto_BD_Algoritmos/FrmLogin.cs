@@ -25,31 +25,30 @@ namespace Projecto_BD_Algoritmos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            FrmPrincipal Form3 = new FrmPrincipal();
-            //FrmTienda Form1 = new FrmTienda();
-            FrmProducto FormP = new FrmProducto();
-            FrmCategorias FormC = new FrmCategorias();
-            FrmProveedores FormPr = new FrmProveedores();
-            FrmClientes FormCl = new FrmClientes();
-            FrmFacturas FormF = new FrmFacturas();
-            FrmVentas FormV = new FrmVentas();
+            //FrmPrincipal Form3 = new FrmPrincipal();
+            ////FrmTienda Form1 = new FrmTienda();
+            //FrmProducto FormP = new FrmProducto();
+            //FrmCategorias FormC = new FrmCategorias();
+            //FrmProveedores FormPr = new FrmProveedores();
+            //FrmClientes FormCl = new FrmClientes();
+            //FrmFacturas FormF = new FrmFacturas();
+            //FrmVentas FormV = new FrmVentas();
             //Aqui va el usuario creado en la base de datos y hay que cambiar la base de datos
             //Esta es la compu de Uriel xd
-            string CadenaConexion = "Data Source = DESKTOP-IU5UBGS\\SQLEXPRESS; Initial Catalog = TiendaExamen; user id = " +
+            string CadenaConexion = "Data Source = DESKTOP-LGBA956\\SQLEXPRESS01; Initial Catalog = TiendaExamen; user id = " +
                 txtUsername.Text + "; password =" + txtPassword.Text;
 
             try
             {
-                //Conexion.ConnectionString = CadenaConexion;
-                //Conexion.Open();
                 FrmPrincipal.BaseDatos.cadConexion = CadenaConexion;
                 FrmPrincipal.BaseDatos.Conexion.ConnectionString = CadenaConexion;
                 FrmPrincipal.BaseDatos.Conexion.Open();
                 MessageBox.Show("Conexion Inciada");
                 FrmPrincipal.BaseDatos.Conexion.Close();
+                FrmPrincipal.BaseDatos.SesionIniciada = true;
                 this.Close();
-                Form3.Hide();
-                FormV.Show();
+                //Form3.Hide();
+                //FormV.Show();
             }
             catch (SqlException Ex)
             {

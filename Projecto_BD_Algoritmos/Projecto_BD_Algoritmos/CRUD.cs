@@ -22,6 +22,7 @@ namespace Projecto_BD_Algoritmos
             this.Conexion = new SqlConnection();
             this.Comando = new SqlCommand();
             this.cadConexion = string.Empty;
+            this.SesionIniciada = false;
         }
 
         public CRUD(string CadenaConexion)
@@ -31,6 +32,7 @@ namespace Projecto_BD_Algoritmos
 
             this.Comando = new SqlCommand();
             this.cadConexion = CadenaConexion;
+            this.SesionIniciada = false;
         }
 
         #region SP_Proveedores

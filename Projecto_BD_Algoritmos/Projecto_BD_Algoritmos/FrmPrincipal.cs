@@ -22,23 +22,136 @@ namespace Projecto_BD_Algoritmos
         private void Form1_Load(object sender, EventArgs e)
         {
             BaseDatos = new CRUD();
-            //MessageBox.Show("baer");
-            //MessageBox.Show("baerecito");
+
+            //administradorToolStripMenuItem.Text = "LogIn";
+            clientesToolStripMenuItem.Enabled = false;
+            categoriasToolStripMenuItem.Enabled = false;
+            productoToolStripMenuItem.Enabled = false;
+            proveedoresToolStripMenuItem.Enabled = false;
+            ventasToolStripMenuItem.Enabled = false;
+            facturasToolStripMenuItem.Enabled = false;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void administradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLogin Form1 = new FrmLogin();
-            //Form1.MdiParent = this;
-            Form1.Show();
+            if (!BaseDatos.SesionIniciada)
+            {
+                FrmLogin formL = new FrmLogin();
+
+                this.IsMdiContainer = true;
+                formL.MdiParent = this;
+                formL.FormClosing += new FormClosingEventHandler(HablitarMenu);
+                formL.Show();
+            }
+            else
+            {
+
+                if (MessageBox.Show("Deseas Cerrar Sesión?", "Logout",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    BaseDatos = new CRUD();
+                    administradorToolStripMenuItem.Text = "LogIn";
+                    clientesToolStripMenuItem.Enabled = false;
+                    categoriasToolStripMenuItem.Enabled = false;
+                    productoToolStripMenuItem.Enabled = false;
+                    proveedoresToolStripMenuItem.Enabled = false;
+                    ventasToolStripMenuItem.Enabled = false;
+                    facturasToolStripMenuItem.Enabled = false;
+                }
+            }
         }
 
-        private void btnVisitanos_Click(object sender, EventArgs e)
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPrincipal FormP = new FrmPrincipal();
-            FrmTienda Form2 = new FrmTienda();
-            Form2.Show();
-            this.Hide();
+            FrmClientes frmC = new FrmClientes();
+            this.IsMdiContainer = true;
+            frmC.MdiParent = this;
+            frmC.Show();
+        }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProducto frmp = new FrmProducto();
+            this.IsMdiContainer = true;
+            frmp.MdiParent = this;
+            frmp.Show();
+        }
+
+        private void clientesCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultasClientes frmC = new FrmConsultasClientes();
+            this.IsMdiContainer = true;
+            frmC.MdiParent = this;
+            frmC.Show();
+        }
+
+        private void admonCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultasAdmin frmA = new FrmConsultasAdmin();
+            this.IsMdiContainer = true;
+            frmA.MdiParent = this;
+            frmA.Show();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias frmC = new FrmCategorias();
+            this.IsMdiContainer = true;
+            frmC.MdiParent = this;
+            frmC.Show();
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFacturas frmf = new FrmFacturas();
+            this.IsMdiContainer = true;
+            frmf.MdiParent = this;
+            frmf.Show();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProveedores frmp = new FrmProveedores();
+            this.IsMdiContainer = true;
+            frmp.MdiParent = this;
+            frmp.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVentas frmv = new FrmVentas();
+            this.IsMdiContainer = true;
+            frmv.MdiParent = this;
+            frmv.Show();
+        }
+
+        private void webToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultaNuestrosProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void HablitarMenu(object sender, FormClosingEventArgs e)
+        {
+            if (BaseDatos.SesionIniciada)
+            {
+                clientesToolStripMenuItem.Enabled = true;
+                categoriasToolStripMenuItem.Enabled = true;
+                productoToolStripMenuItem.Enabled = true;
+                proveedoresToolStripMenuItem.Enabled = true;
+                ventasToolStripMenuItem.Enabled = true;
+                facturasToolStripMenuItem.Enabled = true;
+                administradorToolStripMenuItem.Text = "LogOut";
+            }
         }
     }
 }
