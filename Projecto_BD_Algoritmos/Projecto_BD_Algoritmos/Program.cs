@@ -16,7 +16,7 @@ namespace Projecto_BD_Algoritmos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new FrmTienda());
         }
     }
 }
