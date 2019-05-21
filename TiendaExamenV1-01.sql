@@ -330,3 +330,16 @@ create procedure SP_eliminar_facturas
 as 
 delete from Facturas where id_Factura = @id_Factura
 go
+
+--clientes
+select Producto.precio as 'Mas Caro' from Producto where Producto.precio>4000
+
+select Producto.precio as 'Mas Barato' from Producto where Producto.precio>200 and Producto.precio<1000
+
+select producto.id_producto as 'Num Producto',producto.nombre_producto as Nombre,Categorias.id_Categoria as 'Num Categoria',Producto.id_Proveedor as 'Num proveedor' 
+from producto inner join categorias on producto.id_categoria = Producto.id_categoria where Categorias.id_Categoria = 1
+
+select Producto.nombre_producto as 'Nombre Producto', Producto.descripcion as Descripcion, Producto.precio as Precio from Producto
+
+select Producto.id_Proveedor as 'Num Proveedor', Producto.nombre_producto as 'Nombre Producto',Producto.precio as Precio,Producto.id_Proveedor as 'Num Proveedor',
+Proveedores.nombre_prov from Producto inner join Proveedores on Proveedores.nombre_prov=Proveedores.nombre_prov where Producto.id_Proveedor=1
