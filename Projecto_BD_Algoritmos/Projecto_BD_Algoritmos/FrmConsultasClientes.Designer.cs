@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultasClientes));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbConsultas = new System.Windows.Forms.ComboBox();
+            this.txtValores = new System.Windows.Forms.TextBox();
+            this.btnInsertar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,13 +44,39 @@
             this.dataGridView1.Size = new System.Drawing.Size(502, 425);
             this.dataGridView1.TabIndex = 0;
             // 
-            // comboBox1
+            // cmbConsultas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(588, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cmbConsultas.FormattingEnabled = true;
+            this.cmbConsultas.Items.AddRange(new object[] {
+            "Nonbre de los productos y sus precio",
+            "Todos lo detalles",
+            "Ver los productos que se ajustan al presupuesto",
+            "Producto y descripcion",
+            "Producto y su categoria"});
+            this.cmbConsultas.Location = new System.Drawing.Point(565, 50);
+            this.cmbConsultas.Name = "cmbConsultas";
+            this.cmbConsultas.Size = new System.Drawing.Size(200, 21);
+            this.cmbConsultas.TabIndex = 1;
+            this.cmbConsultas.SelectedIndexChanged += new System.EventHandler(this.cmbConsultas_SelectedIndexChanged);
+            // 
+            // txtValores
+            // 
+            this.txtValores.Location = new System.Drawing.Point(565, 146);
+            this.txtValores.Name = "txtValores";
+            this.txtValores.Size = new System.Drawing.Size(200, 20);
+            this.txtValores.TabIndex = 2;
+            this.txtValores.Visible = false;
+            // 
+            // btnInsertar
+            // 
+            this.btnInsertar.Location = new System.Drawing.Point(625, 188);
+            this.btnInsertar.Name = "btnInsertar";
+            this.btnInsertar.Size = new System.Drawing.Size(75, 23);
+            this.btnInsertar.TabIndex = 3;
+            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Visible = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // FrmConsultasClientes
             // 
@@ -56,18 +84,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 455);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnInsertar);
+            this.Controls.Add(this.txtValores);
+            this.Controls.Add(this.cmbConsultas);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmConsultasClientes";
             this.Text = "FrmConsultasClientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbConsultas;
+        private System.Windows.Forms.TextBox txtValores;
+        private System.Windows.Forms.Button btnInsertar;
     }
 }

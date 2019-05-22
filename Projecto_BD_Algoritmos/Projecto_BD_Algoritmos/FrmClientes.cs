@@ -162,5 +162,10 @@ namespace Projecto_BD_Algoritmos
                 MessageBox.Show(Ex.Message);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
