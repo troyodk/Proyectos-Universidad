@@ -53,6 +53,7 @@ namespace Projecto_BD_Algoritmos
                 {
                     MessageBox.Show(EX.Message);
                 }
+                FrmPrincipal.BaseDatos.Conexion.Close();
             }
             if (cmbConsultas.SelectedIndex == 1)
             {
@@ -66,7 +67,8 @@ namespace Projecto_BD_Algoritmos
                         FrmPrincipal.BaseDatos.Conexion.Open();
                     }
 
-                    SQL = "select * from Producto";
+                    SQL = "select Producto.nombre_producto as 'Nombre del Producto',Producto.precio as 'Precio', Proveedores.nombre_prov as 'Marca/Proveedor' from Producto "+
+                          "inner join Proveedores on Proveedores.id_Proveedor = Producto.id_Proveedor";
                     //SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
 
                     FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
@@ -85,6 +87,7 @@ namespace Projecto_BD_Algoritmos
                 {
                     MessageBox.Show(EX.Message);
                 }
+                FrmPrincipal.BaseDatos.Conexion.Close();
             }
             if (cmbConsultas.SelectedIndex == 2)
             {
@@ -127,6 +130,7 @@ namespace Projecto_BD_Algoritmos
                 {
                     MessageBox.Show(EX.Message);
                 }
+                FrmPrincipal.BaseDatos.Conexion.Close();
             }
             if (cmbConsultas.SelectedIndex == 4)
             {
@@ -159,6 +163,7 @@ namespace Projecto_BD_Algoritmos
                 {
                     MessageBox.Show(EX.Message);
                 }
+                FrmPrincipal.BaseDatos.Conexion.Close();
             }
         }
 
@@ -197,6 +202,12 @@ namespace Projecto_BD_Algoritmos
             {
                 MessageBox.Show(EX.Message);
             }
+            FrmPrincipal.BaseDatos.Conexion.Close();
+        }
+
+        private void FrmConsultasClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Projecto_BD_Algoritmos
             proveedoresToolStripMenuItem.Enabled = false;
             ventasToolStripMenuItem.Enabled = false;
             facturasToolStripMenuItem.Enabled = false;
+            admonCToolStripMenuItem.Enabled = false;
         }
 
         private void administradorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace Projecto_BD_Algoritmos
                 proveedoresToolStripMenuItem.Enabled = true;
                 ventasToolStripMenuItem.Enabled = true;
                 facturasToolStripMenuItem.Enabled = true;
+                admonCToolStripMenuItem.Enabled = true;
                 administradorToolStripMenuItem.Text = "LogOut";
             }
         }

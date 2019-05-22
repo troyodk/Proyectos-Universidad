@@ -47,9 +47,10 @@
             // cmbConsultas
             // 
             this.cmbConsultas.FormattingEnabled = true;
+            this.cmbConsultas.ItemHeight = 13;
             this.cmbConsultas.Items.AddRange(new object[] {
             "Nonbre de los productos y sus precio",
-            "Todos lo detalles",
+            "Producto, precio y marca",
             "Ver los productos que se ajustan al presupuesto",
             "Producto y descripcion",
             "Producto y su categoria"});
@@ -90,6 +91,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmConsultasClientes";
             this.Text = "FrmConsultasClientes";
+            this.Load += new System.EventHandler(this.FrmConsultasClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

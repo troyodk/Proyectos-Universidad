@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTienda));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.btnVisitanos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -59,25 +58,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Bienvenidos";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(468, 402);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(197, 36);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Iniciar Sesion Admon";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
-            // 
             // btnVisitanos
             // 
             this.btnVisitanos.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnVisitanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisitanos.Location = new System.Drawing.Point(344, 402);
+            this.btnVisitanos.Location = new System.Drawing.Point(532, 402);
             this.btnVisitanos.Name = "btnVisitanos";
             this.btnVisitanos.Size = new System.Drawing.Size(118, 36);
             this.btnVisitanos.TabIndex = 4;
+            this.btnVisitanos.TabStop = false;
             this.btnVisitanos.Text = "Visitanos";
             this.btnVisitanos.UseVisualStyleBackColor = true;
             this.btnVisitanos.Click += new System.EventHandler(this.btnVisitanos_Click_1);
@@ -90,11 +79,11 @@
             this.ClientSize = new System.Drawing.Size(677, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnVisitanos);
             this.Name = "FrmTienda";
             this.Text = "FrmTienda";
             this.Load += new System.EventHandler(this.FrmTienda_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmTienda_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,7 +93,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnVisitanos;
     }
 }

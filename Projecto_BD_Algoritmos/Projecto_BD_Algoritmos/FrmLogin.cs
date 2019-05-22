@@ -40,15 +40,18 @@ namespace Projecto_BD_Algoritmos
 
             try
             {
-                FrmPrincipal.BaseDatos.cadConexion = CadenaConexion;
-                FrmPrincipal.BaseDatos.Conexion.ConnectionString = CadenaConexion;
-                FrmPrincipal.BaseDatos.Conexion.Open();
-                MessageBox.Show("Conexion Inciada");
-                FrmPrincipal.BaseDatos.Conexion.Close();
-                FrmPrincipal.BaseDatos.SesionIniciada = true;
-                this.Close();
-                //Form3.Hide();
-                //FormV.Show();
+                if (FrmPrincipal.BaseDatos.Conexion.State == ConnectionState.Closed)
+                {
+                    FrmPrincipal.BaseDatos.cadConexion = CadenaConexion;
+                    FrmPrincipal.BaseDatos.Conexion.ConnectionString = CadenaConexion;
+                    FrmPrincipal.BaseDatos.Conexion.Open();
+                    MessageBox.Show("Conexion Inciada");
+                    FrmPrincipal.BaseDatos.Conexion.Close();
+                    FrmPrincipal.BaseDatos.SesionIniciada = true;
+                    this.Close();
+                    //Form3.Hide();
+                    //FormV.Show();
+                }
             }
             catch (SqlException Ex)
             {

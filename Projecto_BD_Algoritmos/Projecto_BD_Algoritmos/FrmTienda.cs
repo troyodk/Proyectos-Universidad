@@ -13,7 +13,8 @@ namespace Projecto_BD_Algoritmos
 {
     public partial class FrmTienda : Form
     {
-        public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
+        //public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
+        
 
         public FrmTienda()
         {
@@ -22,7 +23,7 @@ namespace Projecto_BD_Algoritmos
 
         private void FrmTienda_Load(object sender, EventArgs e)
         {
-            BaseDatos = new CRUD();
+            FrmPrincipal.BaseDatos = new CRUD();
         }
 
         private void btnVisitanos_Click_1(object sender, EventArgs e)
@@ -35,14 +36,22 @@ namespace Projecto_BD_Algoritmos
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            if (BaseDatos.SesionIniciada == false)
+            if (FrmPrincipal.BaseDatos.SesionIniciada == false)
             {
                 FrmLogin Form1 = new FrmLogin();
                 Form1.Show();
             }
             else
             {
-                btnLogin.Enabled = false;
+                
+            }
+        }
+
+        private void FrmTienda_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue == 'A')
+            {
+                MessageBox.Show("aber");
             }
         }
     }
