@@ -13,7 +13,7 @@ namespace Projecto_BD_Algoritmos
     public partial class FrmPrincipal : Form
     {
         public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
-
+        int font_size = 8;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -37,6 +37,7 @@ namespace Projecto_BD_Algoritmos
         {
             if (!BaseDatos.SesionIniciada)
             {
+
                 FrmLogin formL = new FrmLogin();
 
                 this.IsMdiContainer = true;
@@ -153,6 +154,38 @@ namespace Projecto_BD_Algoritmos
                 facturasToolStripMenuItem.Enabled = true;
                 admonCToolStripMenuItem.Enabled = true;
                 administradorToolStripMenuItem.Text = "LogOut";
+            }
+        }
+
+        private void FrmPrincipal_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                font_size -= 2;
+                loginToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                loginToolStripMenuItem.Invalidate();
+                consultasToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                consultasToolStripMenuItem.Invalidate();
+                tablasToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                tablasToolStripMenuItem.Invalidate();
+                webToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                webToolStripMenuItem.Invalidate();
+                salirToolStripMenuItem.Font= new Font(this.Font.Name, font_size);
+                salirToolStripMenuItem.Invalidate();
+            }
+            else
+            {
+                font_size += 2;
+                loginToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                loginToolStripMenuItem.Invalidate();
+                consultasToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                consultasToolStripMenuItem.Invalidate();
+                tablasToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                tablasToolStripMenuItem.Invalidate();
+                webToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                webToolStripMenuItem.Invalidate();
+                salirToolStripMenuItem.Font = new Font(this.Font.Name, font_size);
+                salirToolStripMenuItem.Invalidate();
             }
         }
     }
