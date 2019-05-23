@@ -1,50 +1,35 @@
 import fisica.*;
 
 FWorld Mundo;
-FBox Caja;
-FBox Caja2;
-FCircle Circulo;
 FBox Limit1;
+PImage img;
+int count=0;
 
 void setup(){
+ img = loadImage("BGhere3.jpg");//plx never press 'p', if u press 'p', u can press 's' ;
  size(700,700);
- background(0);
  Fisica.init(this);
- Mundo = new FWorld();
- 
- //Caja = new FBox(40,40);
- //Caja.setFill(255,0,0);
- //Caja.setPosition(200,0);
- 
- //Caja2 = new FBox(100,30);
- //Caja2.setFill(0,255,0);
- //Caja2.setPosition(240,400);
- //Caja2.setStatic(true);
- 
- //Circulo = new FCircle(40);
- //Circulo.setPosition(300,0);
- 
- //Limit1 = new FBox(400,20);
- //Limit1.setPosition(370,0);
- //Limit1.setStatic(true);
- //Limit1.setRotation(PI/3);
- 
+ Mundo = new FWorld(); 
  Mundo.add(Limit1);
- //Mundo.add(Caja);
- //Mundo.add(Caja2);
- //Mundo.add(Circulo);
  
  board();
  
  Mundo.setEdges();
- Mundo.setEdgesFriction(1);
- Mundo.setEdgesRestitution(1);
+ Mundo.setEdgesFriction(.5);
+ Mundo.setEdgesRestitution(0);
 }
 
 void draw(){
- background(0);
- Mundo.step();
- Mundo.draw();
+   if (count==0){
+     background(255);
+   }
+   else
+   {
+      background(img);
+   }
+ //background(random(255),random(255),random(255));
+   Mundo.step();
+   Mundo.draw();
 }
 
 void mouseClicked(){
@@ -52,5 +37,14 @@ void mouseClicked(){
 }
 
 void keyPressed(){
- ClearDaBalls();
+  if(key=='p' || key=='P'){
+    count=1;
+ }else if(key=='s'|| key=='S'){
+ count=0;
+ }
+ 
+  if(key=='c' || key=='C'){
+    ClearDaBalls();
+  }
+  
 }
