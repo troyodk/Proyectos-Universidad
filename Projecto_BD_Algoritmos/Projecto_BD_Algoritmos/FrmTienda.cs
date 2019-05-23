@@ -14,11 +14,19 @@ namespace Projecto_BD_Algoritmos
     public partial class FrmTienda : Form
     {
         //public static CRUD BaseDatos; //Clase de BD, static para ser accesible desde afuera de la forma
-        
 
+        public List<Bitmap> slides = new List<Bitmap>();
+        int elemento_actual = 1;
         public FrmTienda()
         {
             InitializeComponent();
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            slides.Add(new Bitmap("im1.jpeg"));
+            pictureBox1.Image = slides[0];
+            slides.Add(new Bitmap("imagen1 (2).jpeg"));
+            slides.Add(new Bitmap("imagen1 (3).jpeg"));
+            slides.Add(new Bitmap("imagen1 (4).jpeg"));
+            slides.Add(new Bitmap("imagen1 (5).jpeg"));
         }
 
         private void FrmTienda_Load(object sender, EventArgs e)
@@ -51,7 +59,17 @@ namespace Projecto_BD_Algoritmos
         {
             if(e.KeyValue == 'A')
             {
-                MessageBox.Show("aber");
+                elemento_actual++;
+                elemento_actual %= 5;
+                pictureBox1.Image = slides[elemento_actual];
+            }
+            if(e.KeyValue == 'D')
+            {
+                elemento_actual--;
+                if (elemento_actual < 0)
+                    elemento_actual = 4;
+                pictureBox1.Image = slides[elemento_actual];
+
             }
         }
     }
