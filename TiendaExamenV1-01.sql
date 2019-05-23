@@ -343,3 +343,74 @@ select Producto.nombre_producto as 'Nombre Producto', Producto.descripcion as De
 
 select Producto.id_Proveedor as 'Num Proveedor', Producto.nombre_producto as 'Nombre Producto',Producto.precio as Precio,Producto.id_Proveedor as 'Num Proveedor',
 Proveedores.nombre_prov from Producto inner join Proveedores on Proveedores.nombre_prov=Proveedores.nombre_prov where Producto.id_Proveedor=1
+
+
+--------------------------------------------------------------
+--precedures de consulta para visual
+
+use TiendaExamen
+go
+create procedure consultC1
+as
+select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc
+go
+
+create procedure consultC2
+as
+select Producto.nombre_producto as 'Nombre del Producto',Producto.precio as 'Precio', Proveedores.nombre_prov as 'Marca/Proveedor' from Producto inner join Proveedores on Proveedores.id_Proveedor = Producto.id_Proveedor
+go
+
+create procedure consultC3
+as
+select nombre_producto as 'Nombre del Producto', descripcion as 'Descripcion' from Producto
+go
+
+create procedure consultC4
+as
+select nombre_producto as 'Nombre del Producto', categorias.descripcion_categoria as 'Categoria' from Producto inner join categorias on Producto.id_Categoria=categorias.id_Categoria
+go
+
+create procedure consultC5
+as
+select nombre_producto,precio from Producto where precio < ???
+go
+
+create procedure consultA1
+as
+select Proveedores.id_Proveedor as 'Num Proveedor', Proveedores.nombre_prov as 'Nombre Proveedor', Proveedores.direccion_prov as 'Direccion del Proveedor',Proveedores.telefono_prov as 'Tel Proveedor' from Proveedores order by Proveedores.nombre_prov
+go
+
+create procedure consultA2
+as
+select Clientes.id_Cliente as 'Num Cliente', Clientes.nombre_cliente as 'Nombre Cliente', Clientes.direccion_cliente as 'Direccion Cliente', Clientes.telefono_cliente as 'Tel Cliente', Facturas.id_Factura as 'Num Factura' from Clientes inner join Facturas on Facturas.id_Factura = 1
+go
+
+create procedure consultA3
+as
+select Ventas.id_Ventas as 'Num Venta', Ventas.id_Producto as 'Num Producto', Ventas.cantidad as 'Productos Vendidos', Producto.nombre_producto as 'Nombre Producto' from Ventas inner join Producto on Producto.nombre_producto = Producto.nombre_producto where Ventas.cantidad > 3
+go
+
+create procedure consultA4
+as
+select Producto.id_Producto as 'Num Producto',Producto.nombre_producto as 'Nombre Producto',Proveedores.id_Proveedor as 'Num Proveedor',Proveedores.nombre_prov as 'Nom proveedor' from Producto inner join Proveedores on Proveedores.id_Proveedor = Producto.id_Proveedor
+go
+
+create procedure consultA5
+as
+select Facturas.id_Factura as 'Num Factura', Facturas.fecha as 'Fecha de Factura', Clientes.nombre_cliente as 'Nombre Cliente' from Facturas inner join Clientes on Clientes.nombre_cliente = Clientes.nombre_cliente where Facturas.id_Factura = 1
+go
+
+create procedure consultA6
+as
+select Clientes.nombre_cliente as 'Nombre Cliente', Clientes.direccion_cliente as 'Direccion Cliente', Clientes.telefono_cliente as 'Telefono Cliente', Producto.precio as 'Precio del Producto' from Clientes inner join Producto on Producto.precio > 5000
+go
+
+create procedure consultA7
+as
+select Categorias.id_Categoria as 'Num Categoria', Categorias.descripcion_categoria as 'Descripcion' from Categorias
+go
+
+
+
+
+
