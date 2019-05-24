@@ -410,5 +410,244 @@ namespace Projecto_BD_Algoritmos
             return filas;
         }
         #endregion
+
+        #region SP_ConsultasCliente
+        public int ConsultC1()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultC1", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultC2()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultC2", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultC3()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultC3", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultC4()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultC4", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultC5(string valor)
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultC5", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+
+                this.Comando.Parameters.AddWithValue("valor", valor);
+
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+        }
+
+
+
+            #endregion
+
+        #region SP_ConsultasAdmon
+        public int ConsultA1()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA1", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultA2()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA2", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultA3()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA3", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultA4()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA4", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultA5()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA5", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultA6()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA6", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        public int ConsultA7()
+        {
+            int filas = 0;
+            try
+            {
+
+                this.Comando = new SqlCommand("consultA7", this.Conexion);
+                this.Comando.CommandType = CommandType.StoredProcedure;
+                filas = this.Comando.ExecuteNonQuery();
+            }
+            catch (SqlException Ex)
+            {
+                filas = Ex.ErrorCode;
+            }
+
+            return filas;
+
+        }
+
+        #endregion
+
     }
 }

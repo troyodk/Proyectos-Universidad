@@ -11,10 +11,11 @@ using System.Data.SqlClient;
 
 namespace Projecto_BD_Algoritmos
 {
+
     public partial class FrmFacturas : Form
     {
         int Fila = 0;
-
+        DateTimePicker Calendario;
         public FrmFacturas()
         {
             InitializeComponent();
@@ -161,6 +162,21 @@ namespace Projecto_BD_Algoritmos
             {
                 MessageBox.Show(Ex.Message);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

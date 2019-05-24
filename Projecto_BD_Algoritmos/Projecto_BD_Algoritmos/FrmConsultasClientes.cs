@@ -25,6 +25,7 @@ namespace Projecto_BD_Algoritmos
             DataSet DS = new DataSet(); 
             if (cmbConsultas.SelectedIndex == 0)
             {
+
                 try
                 {
                     if (FrmPrincipal.BaseDatos.Conexion.State == ConnectionState.Closed)
@@ -35,11 +36,14 @@ namespace Projecto_BD_Algoritmos
                         FrmPrincipal.BaseDatos.Conexion.Open();
                     }
 
-                    SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc"; 
+                    //SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc"; 
 
-                    FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
-                    FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
-                    FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+                    //FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
+                    //FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
+                    //FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+
+                    int res = FrmPrincipal.BaseDatos.ConsultC1();
+                
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
                     dataGridView1.DataSource = DS.Tables[0];
@@ -67,13 +71,15 @@ namespace Projecto_BD_Algoritmos
                         FrmPrincipal.BaseDatos.Conexion.Open();
                     }
 
-                    SQL = "select Producto.nombre_producto as 'Nombre del Producto',Producto.precio as 'Precio', Proveedores.nombre_prov as 'Marca/Proveedor' from Producto "+
-                          "inner join Proveedores on Proveedores.id_Proveedor = Producto.id_Proveedor";
-                    //SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
+                    //SQL = "select Producto.nombre_producto as 'Nombre del Producto',Producto.precio as 'Precio', Proveedores.nombre_prov as 'Marca/Proveedor' from Producto "+
+                    //      "inner join Proveedores on Proveedores.id_Proveedor = Producto.id_Proveedor";
+                    ////SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
 
-                    FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
-                    FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
-                    FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+                    //FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
+                    //FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
+                    //FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+
+                    int res = FrmPrincipal.BaseDatos.ConsultC2();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
                     dataGridView1.DataSource = DS.Tables[0];
@@ -111,12 +117,14 @@ namespace Projecto_BD_Algoritmos
                         FrmPrincipal.BaseDatos.Conexion.Open();
                     }
 
-                    SQL = "select nombre_producto as 'Nombre del Producto', descripcion as 'Descripcion' from Producto";
-                    //SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
+                    //SQL = "select nombre_producto as 'Nombre del Producto', descripcion as 'Descripcion' from Producto";
+                    ////SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
 
-                    FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
-                    FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
-                    FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+                    //FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
+                    //FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
+                    //FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+
+                    int res = FrmPrincipal.BaseDatos.ConsultC3();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
                     dataGridView1.DataSource = DS.Tables[0];
@@ -144,12 +152,14 @@ namespace Projecto_BD_Algoritmos
                         FrmPrincipal.BaseDatos.Conexion.Open();
                     }
 
-                    SQL = "select nombre_producto as 'Nombre del Producto', categorias.descripcion_categoria as 'Categoria' from Producto inner join categorias on Producto.id_Categoria=categorias.id_Categoria";
-                    //SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
+                    //SQL = "select nombre_producto as 'Nombre del Producto', categorias.descripcion_categoria as 'Categoria' from Producto inner join categorias on Producto.id_Categoria=categorias.id_Categoria";
+                    ////SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
 
-                    FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
-                    FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
-                    FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+                    //FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
+                    //FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
+                    //FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+
+                    int res = FrmPrincipal.BaseDatos.ConsultC4();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
                     dataGridView1.DataSource = DS.Tables[0];
@@ -172,7 +182,7 @@ namespace Projecto_BD_Algoritmos
             String SQL;
             SqlDataAdapter Adaptador;
             DataSet DS = new DataSet();
-            String Valor = txtValores.Text;
+            string Valor = (txtValores.Text);
             try
             {
                 if (FrmPrincipal.BaseDatos.Conexion.State == ConnectionState.Closed)
@@ -183,12 +193,14 @@ namespace Projecto_BD_Algoritmos
                     FrmPrincipal.BaseDatos.Conexion.Open();
                 }
 
-                SQL = "select nombre_producto,precio from Producto where precio <" + Valor + ";";
-                //SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
+                //SQL = "select nombre_producto,precio from Producto where precio <" + Valor + ";";
+                ////SQL = "select nombre_producto,MAX(precio) as 'Mas Caro' from Producto group by nombre_producto, precio order by precio desc";
 
-                FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
-                FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
-                FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+                //FrmPrincipal.BaseDatos.Comando.Connection = FrmPrincipal.BaseDatos.Conexion;
+                //FrmPrincipal.BaseDatos.Comando.CommandType = CommandType.Text;
+                //FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
+
+                int res = FrmPrincipal.BaseDatos.ConsultC5(Valor);
                 Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                 Adaptador.Fill(DS);
                 dataGridView1.DataSource = DS.Tables[0];

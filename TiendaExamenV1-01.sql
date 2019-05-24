@@ -24,7 +24,7 @@ descripcion_categoria nvarchar(100)
 
 create table Facturas(
 id_Factura int Primary key,
-fecha datetime,
+fecha nvarchar(10),
 id_Cliente int
 
 constraint fk_id_Cliente foreign Key (id_Cliente)
@@ -307,7 +307,7 @@ use TiendaExamen
 go
 create procedure SP_insertar_facturas
 @id_Factura integer,
-@fecha datetime,
+@fecha nvarchar(10),
 @id_Cliente integer
 as 
 insert into Facturas(id_Factura,fecha,id_Cliente) 
@@ -317,7 +317,7 @@ go
 --Editar
 create procedure SP_editar_facturas
 @id_Factura integer,
-@fecha datetime,
+@fecha nvarchar(10),
 @id_Cliente integer
 as
 update Facturas set id_Factura=@id_Factura,fecha=@fecha,id_Cliente=@id_Cliente
@@ -371,8 +371,9 @@ select nombre_producto as 'Nombre del Producto', categorias.descripcion_categori
 go
 
 create procedure consultC5
+@valor integer 
 as
-select nombre_producto,precio from Producto where precio < ???
+select nombre_producto,precio from Producto where precio < @valor
 go
 
 create procedure consultA1

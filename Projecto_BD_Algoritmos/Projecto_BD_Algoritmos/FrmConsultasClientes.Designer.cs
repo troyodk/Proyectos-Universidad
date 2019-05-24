@@ -49,7 +49,7 @@
             this.cmbConsultas.FormattingEnabled = true;
             this.cmbConsultas.ItemHeight = 13;
             this.cmbConsultas.Items.AddRange(new object[] {
-            "Nonbre de los productos y sus precio",
+            "Nombre de los productos y sus precios",
             "Producto, precio y marca",
             "Ver los productos que se ajustan al presupuesto",
             "Producto y descripcion",
