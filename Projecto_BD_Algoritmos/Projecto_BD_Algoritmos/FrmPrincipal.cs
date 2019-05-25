@@ -134,10 +134,11 @@ namespace Projecto_BD_Algoritmos
 
         private void consultaNuestrosProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmWeb frmW = new FrmWeb();
-            this.IsMdiContainer = true;
-            frmW.MdiParent = this;
-            frmW.Show();
+            //FrmWeb frmW = new FrmWeb();
+            //this.IsMdiContainer = true;
+            //frmW.MdiParent = this;
+            //frmW.Show();
+            System.Diagnostics.Process.Start("https://fakesteren.000webhostapp.com/index.html?fbclid=IwAR0qh1fGW_NYnAc1fSwJn2zd6ohhSDA7NqtdcJpRQoZ4py5eby5cnwvYPp0");
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

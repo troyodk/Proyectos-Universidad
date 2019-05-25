@@ -81,7 +81,11 @@ namespace Projecto_BD_Algoritmos
             {
                 btnAceptar_Click(sender, e);
             }
-            e.Handled = (e.KeyChar == (char)Keys.Space);
+            if (e.KeyChar == (char)Keys.Space)
+            {
+                MessageBox.Show("El espacio no esta permitido en este campo");
+                e.Handled = (e.KeyChar == (char)Keys.Space);
+            }
         }
 
     }
