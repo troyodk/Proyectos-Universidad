@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientes));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(754, 354);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgClientes.Location = new System.Drawing.Point(13, 13);
+            this.dtgClientes.Name = "dtgClientes";
+            this.dtgClientes.Size = new System.Drawing.Size(754, 354);
+            this.dtgClientes.TabIndex = 0;
+            this.dtgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEliminar
             // 
@@ -90,18 +90,18 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnInsertar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgClientes);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgClientes;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnInsertar;
