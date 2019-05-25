@@ -20,7 +20,6 @@ namespace Projecto_BD_Algoritmos
 
         private void cmbConsultasAdmin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String SQL;
             SqlDataAdapter Adaptador;
             DataSet DS = new DataSet();
             if (cmbConsultasAdmin.SelectedIndex == 0)
@@ -45,11 +44,11 @@ namespace Projecto_BD_Algoritmos
                     int res = FrmPrincipal.BaseDatos.ConsultA1();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -80,11 +79,11 @@ namespace Projecto_BD_Algoritmos
 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -116,11 +115,11 @@ namespace Projecto_BD_Algoritmos
 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -151,11 +150,11 @@ namespace Projecto_BD_Algoritmos
 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -186,11 +185,11 @@ namespace Projecto_BD_Algoritmos
 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -222,11 +221,11 @@ namespace Projecto_BD_Algoritmos
 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -257,11 +256,11 @@ namespace Projecto_BD_Algoritmos
 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasAdmin.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasAdmin.AutoResizeColumns();
+                    dtgConsultasAdmin.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)

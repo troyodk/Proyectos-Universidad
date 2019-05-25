@@ -134,7 +134,10 @@ namespace Projecto_BD_Algoritmos
 
         private void consultaNuestrosProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmWeb frmW = new FrmWeb();
+            this.IsMdiContainer = true;
+            frmW.MdiParent = this;
+            frmW.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

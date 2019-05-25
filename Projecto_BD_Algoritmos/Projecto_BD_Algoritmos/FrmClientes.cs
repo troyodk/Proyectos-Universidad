@@ -44,11 +44,11 @@ namespace Projecto_BD_Algoritmos
                 //LLenar el DataSet con los datos del adaptador
                 Adaptador.Fill(DS);
                 //Ligar el datagridview a los datos del DataSet
-                dataGridView1.DataSource = DS.Tables[0];
+                dtgClientes.DataSource = DS.Tables[0];
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dataGridView1.AutoResizeColumns();
-                dataGridView1.AllowUserToResizeColumns = true;
+                dtgClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                dtgClientes.AutoResizeColumns();
+                dtgClientes.AllowUserToResizeColumns = true;
 
             }
             catch (SqlException EX)
@@ -64,11 +64,11 @@ namespace Projecto_BD_Algoritmos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Renglon = dataGridView1.CurrentRow;
-            int indice = dataGridView1.RowCount - 1;
+            DataGridViewRow Renglon = dtgClientes.CurrentRow;
+            int indice = dtgClientes.RowCount - 1;
             String id_Cliente, nombre, direccion, telefono;
 
-            Renglon = dataGridView1.Rows[indice - 1];
+            Renglon = dtgClientes.Rows[indice - 1];
 
             id_Cliente = Renglon.Cells["id_Cliente"].Value.ToString();
             nombre = Renglon.Cells["nombre_cliente"].Value.ToString();
@@ -100,11 +100,11 @@ namespace Projecto_BD_Algoritmos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Renglon = dataGridView1.CurrentRow;
-            int indice = dataGridView1.RowCount - 1;
+            DataGridViewRow Renglon = dtgClientes.CurrentRow;
+            int indice = dtgClientes.RowCount - 1;
             String id_Cliente, nombre, direccion, telefono;
 
-            Renglon = dataGridView1.Rows[indice - 1];
+            Renglon = dtgClientes.Rows[indice - 1];
 
             id_Cliente = Renglon.Cells["id_Cliente"].Value.ToString();
             nombre = Renglon.Cells["nombre_cliente"].Value.ToString();
@@ -140,7 +140,7 @@ namespace Projecto_BD_Algoritmos
             SqlCommand Comando;
             try
             {
-                id = dataGridView1.Rows[Fila].Cells[0].Value.ToString();
+                id = dtgClientes.Rows[Fila].Cells[0].Value.ToString();
                 SQL = "DELETE FROM Clientes WHERE id_Cliente=" + id + ";";
 
                 Comando = new SqlCommand(SQL, FrmPrincipal.BaseDatos.Conexion);

@@ -64,5 +64,25 @@ namespace Projecto_BD_Algoritmos
         {
             this.Close();
         }
+
+        private void txtPassword_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            lblWarning.Visible = true;
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnAceptar_Click(sender, e);
+            }
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+
     }
 }

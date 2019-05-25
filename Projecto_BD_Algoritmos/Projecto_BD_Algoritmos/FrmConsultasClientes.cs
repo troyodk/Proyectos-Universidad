@@ -20,7 +20,6 @@ namespace Projecto_BD_Algoritmos
 
         private void cmbConsultas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String SQL; 
             SqlDataAdapter Adaptador; 
             DataSet DS = new DataSet(); 
             if (cmbConsultas.SelectedIndex == 0)
@@ -46,11 +45,11 @@ namespace Projecto_BD_Algoritmos
                 
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasClientes.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasClientes.AutoResizeColumns();
+                    dtgConsultasClientes.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -82,11 +81,11 @@ namespace Projecto_BD_Algoritmos
                     int res = FrmPrincipal.BaseDatos.ConsultC2();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasClientes.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasClientes.AutoResizeColumns();
+                    dtgConsultasClientes.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -127,11 +126,11 @@ namespace Projecto_BD_Algoritmos
                     int res = FrmPrincipal.BaseDatos.ConsultC3();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasClientes.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasClientes.AutoResizeColumns();
+                    dtgConsultasClientes.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -162,11 +161,11 @@ namespace Projecto_BD_Algoritmos
                     int res = FrmPrincipal.BaseDatos.ConsultC4();
                     Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                     Adaptador.Fill(DS);
-                    dataGridView1.DataSource = DS.Tables[0];
+                    dtgConsultasClientes.DataSource = DS.Tables[0];
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                    dataGridView1.AutoResizeColumns();
-                    dataGridView1.AllowUserToResizeColumns = true;
+                    dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                    dtgConsultasClientes.AutoResizeColumns();
+                    dtgConsultasClientes.AllowUserToResizeColumns = true;
 
                 }
                 catch (SqlException EX)
@@ -179,7 +178,6 @@ namespace Projecto_BD_Algoritmos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            String SQL;
             SqlDataAdapter Adaptador;
             DataSet DS = new DataSet();
             string Valor = (txtValores.Text);
@@ -203,11 +201,11 @@ namespace Projecto_BD_Algoritmos
                 int res = FrmPrincipal.BaseDatos.ConsultC5(Valor);
                 Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                 Adaptador.Fill(DS);
-                dataGridView1.DataSource = DS.Tables[0];
+                dtgConsultasClientes.DataSource = DS.Tables[0];
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dataGridView1.AutoResizeColumns();
-                dataGridView1.AllowUserToResizeColumns = true;
+                dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                dtgConsultasClientes.AutoResizeColumns();
+                dtgConsultasClientes.AllowUserToResizeColumns = true;
 
             }
             catch (SqlException EX)

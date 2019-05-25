@@ -15,7 +15,6 @@ namespace Projecto_BD_Algoritmos
     public partial class FrmFacturas : Form
     {
         int Fila = 0;
-        DateTimePicker Calendario;
         public FrmFacturas()
         {
             InitializeComponent();
@@ -45,11 +44,11 @@ namespace Projecto_BD_Algoritmos
                 //LLenar el DataSet con los datos del adaptador
                 Adaptador.Fill(DS);
                 //Ligar el datagridview a los datos del DataSet
-                dataGridView1.DataSource = DS.Tables[0];
+                dtgFacturas.DataSource = DS.Tables[0];
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dataGridView1.AutoResizeColumns();
-                dataGridView1.AllowUserToResizeColumns = true;
+                dtgFacturas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                dtgFacturas.AutoResizeColumns();
+                dtgFacturas.AllowUserToResizeColumns = true;
 
             }
             catch (SqlException EX)
@@ -65,12 +64,12 @@ namespace Projecto_BD_Algoritmos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Renglon = dataGridView1.CurrentRow;
-            int indice = dataGridView1.RowCount - 1;
+            DataGridViewRow Renglon = dtgFacturas.CurrentRow;
+            int indice = dtgFacturas.RowCount - 1;
             String id_Factura, fecha, id_Cliente;
             //DateTime fecha;
 
-            Renglon = dataGridView1.Rows[indice - 1];
+            Renglon = dtgFacturas.Rows[indice - 1];
 
             id_Factura = Renglon.Cells["id_Factura"].Value.ToString();
             fecha = Renglon.Cells["fecha"].Value.ToString();
@@ -101,12 +100,12 @@ namespace Projecto_BD_Algoritmos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Renglon = dataGridView1.CurrentRow;
-            int indice = dataGridView1.RowCount - 1;
+            DataGridViewRow Renglon = dtgFacturas.CurrentRow;
+            int indice = dtgFacturas.RowCount - 1;
             String id_Factura, fecha, id_Cliente;
             //DateTime fecha;
 
-            Renglon = dataGridView1.Rows[indice - 1];
+            Renglon = dtgFacturas.Rows[indice - 1];
 
             id_Factura = Renglon.Cells["id_Factura"].Value.ToString();
             fecha = Renglon.Cells["fecha"].Value.ToString();
@@ -141,7 +140,7 @@ namespace Projecto_BD_Algoritmos
             SqlCommand Comando;
             try
             {
-                id = dataGridView1.Rows[Fila].Cells[0].Value.ToString();
+                id = dtgFacturas.Rows[Fila].Cells[0].Value.ToString();
                 SQL = "DELETE FROM Facturas WHERE id_Factura=" + id + ";";
 
                 Comando = new SqlCommand(SQL, FrmPrincipal.BaseDatos.Conexion);

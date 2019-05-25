@@ -29,18 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultasAdmin));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgConsultasAdmin = new System.Windows.Forms.DataGridView();
             this.cmbConsultasAdmin = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultasAdmin)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgConsultasAdmin
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 425);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgConsultasAdmin.AllowUserToAddRows = false;
+            this.dtgConsultasAdmin.AllowUserToDeleteRows = false;
+            this.dtgConsultasAdmin.AllowUserToOrderColumns = true;
+            this.dtgConsultasAdmin.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgConsultasAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgConsultasAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultasAdmin.Enabled = false;
+            this.dtgConsultasAdmin.Location = new System.Drawing.Point(13, 13);
+            this.dtgConsultasAdmin.Name = "dtgConsultasAdmin";
+            this.dtgConsultasAdmin.Size = new System.Drawing.Size(458, 425);
+            this.dtgConsultasAdmin.TabIndex = 0;
             // 
             // cmbConsultasAdmin
             // 
@@ -69,17 +75,17 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cmbConsultasAdmin);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgConsultasAdmin);
             this.Name = "FrmConsultasAdmin";
             this.Text = "FrmConsultasAdmin";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultasAdmin)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgConsultasAdmin;
         private System.Windows.Forms.ComboBox cmbConsultasAdmin;
     }
 }

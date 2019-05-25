@@ -40,11 +40,11 @@ namespace Projecto_BD_Algoritmos
                 FrmPrincipal.BaseDatos.Comando.CommandText = SQL;
                 Adaptador = new SqlDataAdapter(FrmPrincipal.BaseDatos.Comando);
                 Adaptador.Fill(DS);
-                dataGridView1.DataSource = DS.Tables[0];
+                dtgProveedores.DataSource = DS.Tables[0];
 
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-                dataGridView1.AutoResizeColumns();
-                dataGridView1.AllowUserToResizeColumns = true;
+                dtgProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+                dtgProveedores.AutoResizeColumns();
+                dtgProveedores.AllowUserToResizeColumns = true;
 
             }
             catch (SqlException EX)
@@ -60,11 +60,11 @@ namespace Projecto_BD_Algoritmos
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Renglon = dataGridView1.CurrentRow;
-            int indice = dataGridView1.RowCount - 1;
+            DataGridViewRow Renglon = dtgProveedores.CurrentRow;
+            int indice = dtgProveedores.RowCount - 1;
             String id_proveedor, nombre, direccion, telefono;
 
-            Renglon = dataGridView1.Rows[indice - 1];
+            Renglon = dtgProveedores.Rows[indice - 1];
 
             id_proveedor = Renglon.Cells["id_Proveedor"].Value.ToString();
             nombre = Renglon.Cells["nombre_prov"].Value.ToString();
@@ -96,11 +96,11 @@ namespace Projecto_BD_Algoritmos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Renglon = dataGridView1.CurrentRow;
-            int indice = dataGridView1.RowCount - 1;
+            DataGridViewRow Renglon = dtgProveedores.CurrentRow;
+            int indice = dtgProveedores.RowCount - 1;
             String id_proveedor, nombre, direccion, telefono;
 
-            Renglon = dataGridView1.Rows[indice - 1];
+            Renglon = dtgProveedores.Rows[indice - 1];
 
             id_proveedor = Renglon.Cells["id_Proveedor"].Value.ToString();
             nombre = Renglon.Cells["nombre_prov"].Value.ToString();
@@ -136,7 +136,7 @@ namespace Projecto_BD_Algoritmos
             SqlCommand Comando;
             try
             {
-                id = dataGridView1.Rows[Fila].Cells[0].Value.ToString();
+                id = dtgProveedores.Rows[Fila].Cells[0].Value.ToString();
                 SQL = "DELETE FROM Proveedores WHERE id_Proveedor=" + id + ";";
 
                 Comando = new SqlCommand(SQL, FrmPrincipal.BaseDatos.Conexion);
@@ -198,7 +198,7 @@ namespace Projecto_BD_Algoritmos
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Fila = e.RowIndex;
-            if (Fila == dataGridView1.Rows.Count - 1)
+            if (Fila == dtgProveedores.Rows.Count - 1)
                 btnInsertar.Enabled = true;
             else
             {

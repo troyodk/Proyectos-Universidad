@@ -72,5 +72,10 @@ namespace Projecto_BD_Algoritmos
 
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

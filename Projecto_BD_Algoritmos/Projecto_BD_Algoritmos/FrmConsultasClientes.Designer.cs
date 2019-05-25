@@ -29,20 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultasClientes));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgConsultasClientes = new System.Windows.Forms.DataGridView();
             this.cmbConsultas = new System.Windows.Forms.ComboBox();
             this.txtValores = new System.Windows.Forms.TextBox();
             this.btnInsertar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultasClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgConsultasClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(502, 425);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgConsultasClientes.AllowUserToAddRows = false;
+            this.dtgConsultasClientes.AllowUserToDeleteRows = false;
+            this.dtgConsultasClientes.AllowUserToOrderColumns = true;
+            this.dtgConsultasClientes.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dtgConsultasClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgConsultasClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultasClientes.Location = new System.Drawing.Point(13, 13);
+            this.dtgConsultasClientes.MultiSelect = false;
+            this.dtgConsultasClientes.Name = "dtgConsultasClientes";
+            this.dtgConsultasClientes.Size = new System.Drawing.Size(502, 425);
+            this.dtgConsultasClientes.TabIndex = 0;
             // 
             // cmbConsultas
             // 
@@ -88,11 +94,11 @@
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.txtValores);
             this.Controls.Add(this.cmbConsultas);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgConsultasClientes);
             this.Name = "FrmConsultasClientes";
             this.Text = "FrmConsultasClientes";
             this.Load += new System.EventHandler(this.FrmConsultasClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultasClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,7 +106,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgConsultasClientes;
         private System.Windows.Forms.ComboBox cmbConsultas;
         private System.Windows.Forms.TextBox txtValores;
         private System.Windows.Forms.Button btnInsertar;
