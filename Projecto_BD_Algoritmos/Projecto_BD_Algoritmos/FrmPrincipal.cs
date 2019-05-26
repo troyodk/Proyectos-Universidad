@@ -23,7 +23,7 @@ namespace Projecto_BD_Algoritmos
         {
             BaseDatos = new CRUD();
 
-            //administradorToolStripMenuItem.Text = "LogIn";
+            administradorToolStripMenuItem.Text = "Iniciar Sesión Admin";
             clientesToolStripMenuItem.Enabled = false;
             categoriasToolStripMenuItem.Enabled = false;
             productoToolStripMenuItem.Enabled = false;
@@ -52,7 +52,7 @@ namespace Projecto_BD_Algoritmos
                     MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     BaseDatos = new CRUD();
-                    administradorToolStripMenuItem.Text = "LogIn";
+                    administradorToolStripMenuItem.Text = "Iniciar Sesión Admin";
                     clientesToolStripMenuItem.Enabled = false;
                     categoriasToolStripMenuItem.Enabled = false;
                     productoToolStripMenuItem.Enabled = false;
@@ -143,7 +143,7 @@ namespace Projecto_BD_Algoritmos
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         public void HablitarMenu(object sender, FormClosingEventArgs e)
@@ -157,7 +157,7 @@ namespace Projecto_BD_Algoritmos
                 ventasToolStripMenuItem.Enabled = true;
                 facturasToolStripMenuItem.Enabled = true;
                 admonCToolStripMenuItem.Enabled = true;
-                administradorToolStripMenuItem.Text = "LogOut";
+                administradorToolStripMenuItem.Text = "Cerrar Sesión";
             }
         }
 

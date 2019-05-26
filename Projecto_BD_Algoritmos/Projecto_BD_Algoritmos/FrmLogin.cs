@@ -88,5 +88,9 @@ namespace Projecto_BD_Algoritmos
             }
         }
 
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
