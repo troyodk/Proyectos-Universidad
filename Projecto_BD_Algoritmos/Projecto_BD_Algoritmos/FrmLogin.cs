@@ -53,10 +53,10 @@ namespace Projecto_BD_Algoritmos
                     //FormV.Show();
                 }
             }
-            catch (SqlException Ex)
+            catch (SqlException)
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
-                MessageBox.Show(Ex.Message);
+                //MessageBox.Show(Ex.Message);
             }
         }
 

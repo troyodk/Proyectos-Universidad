@@ -92,6 +92,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.dtgProveedores);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedores";
             this.Text = "FrmProveedores";
             this.Load += new System.EventHandler(this.FrmProveedores_Load);

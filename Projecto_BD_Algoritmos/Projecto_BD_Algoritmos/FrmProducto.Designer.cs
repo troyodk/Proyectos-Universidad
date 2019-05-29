@@ -91,6 +91,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.dtgProducto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProducto";
             this.Text = "FrmProducto";
             this.Load += new System.EventHandler(this.FrmProducto_Load);

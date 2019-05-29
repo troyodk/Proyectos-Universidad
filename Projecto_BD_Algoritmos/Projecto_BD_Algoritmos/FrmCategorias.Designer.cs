@@ -90,6 +90,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCategorias";
             this.Text = "FrmCategorias";
             this.Load += new System.EventHandler(this.FrmCategorias_Load);

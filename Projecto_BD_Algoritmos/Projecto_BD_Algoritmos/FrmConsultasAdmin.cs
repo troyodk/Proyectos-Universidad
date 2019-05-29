@@ -49,7 +49,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -84,7 +84,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -120,7 +120,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -155,7 +155,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -190,7 +190,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -226,7 +226,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -261,7 +261,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasAdmin.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasAdmin.AutoResizeColumns();
                     dtgConsultasAdmin.AllowUserToResizeColumns = true;
-
+                    dtgConsultasAdmin.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -269,6 +269,11 @@ namespace Projecto_BD_Algoritmos
                 }
                 FrmPrincipal.BaseDatos.Conexion.Close();
             }
+        }
+
+        private void dtgConsultasAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

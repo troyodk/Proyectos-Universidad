@@ -48,6 +48,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnEliminar.Location = new System.Drawing.Point(692, 415);
             this.btnEliminar.Name = "btnEliminar";
@@ -60,6 +61,7 @@
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnActualizar.Location = new System.Drawing.Point(566, 415);
             this.btnActualizar.Name = "btnActualizar";
@@ -72,6 +74,7 @@
             // btnInsertar
             // 
             this.btnInsertar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInsertar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnInsertar.Location = new System.Drawing.Point(445, 415);
             this.btnInsertar.Name = "btnInsertar";
@@ -91,6 +94,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.dtgClientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);

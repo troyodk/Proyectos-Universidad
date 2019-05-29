@@ -175,6 +175,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);

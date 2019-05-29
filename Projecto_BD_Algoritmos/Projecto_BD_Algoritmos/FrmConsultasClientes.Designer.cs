@@ -49,6 +49,7 @@
             this.dtgConsultasClientes.Name = "dtgConsultasClientes";
             this.dtgConsultasClientes.Size = new System.Drawing.Size(502, 425);
             this.dtgConsultasClientes.TabIndex = 0;
+            this.dtgConsultasClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConsultasClientes_CellContentClick);
             // 
             // cmbConsultas
             // 
@@ -73,6 +74,7 @@
             this.txtValores.Size = new System.Drawing.Size(200, 20);
             this.txtValores.TabIndex = 2;
             this.txtValores.Visible = false;
+            this.txtValores.TextChanged += new System.EventHandler(this.txtValores_TextChanged);
             // 
             // btnInsertar
             // 
@@ -95,6 +97,7 @@
             this.Controls.Add(this.txtValores);
             this.Controls.Add(this.cmbConsultas);
             this.Controls.Add(this.dtgConsultasClientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsultasClientes";
             this.Text = "FrmConsultasClientes";
             this.Load += new System.EventHandler(this.FrmConsultasClientes_Load);

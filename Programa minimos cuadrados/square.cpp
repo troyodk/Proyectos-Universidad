@@ -41,7 +41,7 @@ int linreg(int n, const double x[], const double y[], double* caida, double* int
 }
 int main()
 {
-    freopen("datos.txt","r",stdin);
+    //freopen("datos.txt","r",stdin);
     int n ;
    double x[200];
     double y[200];

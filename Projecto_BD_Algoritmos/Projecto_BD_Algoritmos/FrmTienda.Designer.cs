@@ -62,15 +62,18 @@
             // 
             // btnVisitanos
             // 
+            this.btnVisitanos.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnVisitanos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnVisitanos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVisitanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisitanos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnVisitanos.Location = new System.Drawing.Point(532, 402);
             this.btnVisitanos.Name = "btnVisitanos";
             this.btnVisitanos.Size = new System.Drawing.Size(118, 36);
             this.btnVisitanos.TabIndex = 4;
             this.btnVisitanos.TabStop = false;
             this.btnVisitanos.Text = "Visitanos";
-            this.btnVisitanos.UseVisualStyleBackColor = true;
+            this.btnVisitanos.UseVisualStyleBackColor = false;
             this.btnVisitanos.Click += new System.EventHandler(this.btnVisitanos_Click_1);
             // 
             // pictureBox1
@@ -94,6 +97,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVisitanos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTienda";
             this.Text = "FrmTienda";
             this.Load += new System.EventHandler(this.FrmTienda_Load);

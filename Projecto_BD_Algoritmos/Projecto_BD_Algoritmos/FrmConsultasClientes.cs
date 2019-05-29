@@ -50,7 +50,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasClientes.AutoResizeColumns();
                     dtgConsultasClientes.AllowUserToResizeColumns = true;
-
+                    dtgConsultasClientes.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -86,7 +86,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasClientes.AutoResizeColumns();
                     dtgConsultasClientes.AllowUserToResizeColumns = true;
-
+                    dtgConsultasClientes.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -131,7 +131,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasClientes.AutoResizeColumns();
                     dtgConsultasClientes.AllowUserToResizeColumns = true;
-
+                    dtgConsultasClientes.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -166,7 +166,7 @@ namespace Projecto_BD_Algoritmos
                     dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                     dtgConsultasClientes.AutoResizeColumns();
                     dtgConsultasClientes.AllowUserToResizeColumns = true;
-
+                    dtgConsultasClientes.Enabled = false;
                 }
                 catch (SqlException EX)
                 {
@@ -206,7 +206,7 @@ namespace Projecto_BD_Algoritmos
                 dtgConsultasClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                 dtgConsultasClientes.AutoResizeColumns();
                 dtgConsultasClientes.AllowUserToResizeColumns = true;
-
+                dtgConsultasClientes.Enabled = false;
             }
             catch (SqlException EX)
             {
@@ -216,6 +216,16 @@ namespace Projecto_BD_Algoritmos
         }
 
         private void FrmConsultasClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgConsultasClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtValores_TextChanged(object sender, EventArgs e)
         {
 
         }

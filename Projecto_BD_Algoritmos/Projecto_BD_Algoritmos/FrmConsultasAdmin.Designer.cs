@@ -45,8 +45,10 @@
             this.dtgConsultasAdmin.Enabled = false;
             this.dtgConsultasAdmin.Location = new System.Drawing.Point(13, 13);
             this.dtgConsultasAdmin.Name = "dtgConsultasAdmin";
+            this.dtgConsultasAdmin.ReadOnly = true;
             this.dtgConsultasAdmin.Size = new System.Drawing.Size(458, 425);
             this.dtgConsultasAdmin.TabIndex = 0;
+            this.dtgConsultasAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgConsultasAdmin_CellContentClick);
             // 
             // cmbConsultasAdmin
             // 
@@ -76,6 +78,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cmbConsultasAdmin);
             this.Controls.Add(this.dtgConsultasAdmin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsultasAdmin";
             this.Text = "FrmConsultasAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultasAdmin)).EndInit();
