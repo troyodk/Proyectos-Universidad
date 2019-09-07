@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 
 namespace Projecto_BD_Algoritmos
 {
+    //Buenas tardes
     public class CRUD
     {
         public SqlConnection Conexion;
